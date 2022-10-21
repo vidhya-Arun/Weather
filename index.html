@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-black text-white">
+   <label > Enter city name <input type="text" id="txtCity" alt="enter city name" class="text-black"  onclick="weatherData.getWeatherData(txtCity.value)"></label>
+
+    <div class="flex flex-row gap-10">s
+        <span id="spnTempImg"></span>
+        <span id="spnTemp"></span>
+        <div id="divFactors" class="flex flex-col">
+            <div id="divHumid"> </div>
+            <div id="divPrecip"> </div>
+            <div id="divWind">  </div>
+
+        </div>
+        <div id="spnCity" class="flex flex-col text-right">
+            <div id="divName"></div>
+            <div id="divDateTime"></div>
+            <div id="divStatus" class="capitalize"></div>
+
+        </div>
+    </div>
+    <!--chart js-->
+    <div>
+        <canvas id="myChart" width="500" height="500" class="border-2" ></canvas>
+    </div>
+    <div id="chartXaxis" class="flex flex-row">
+       <span id="spn1"></span>
+      <!--  <span id="spn2"></span>
+        <span id="spn3"></span>
+       -->
+    </div>
+    <script src="assets/js/weather.js"></script>
+
+</body>
+</html>
